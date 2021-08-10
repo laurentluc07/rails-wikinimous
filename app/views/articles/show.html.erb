@@ -1,0 +1,5 @@
+<h1><%= @article.title %></h1>
+<%= @article.content %>
+
+<button><%= link_to "article", articles_path %></button>
+<button><%= link_to "Edit", edit_article_path(@article) %></button>

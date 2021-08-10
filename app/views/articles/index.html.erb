@@ -1,0 +1,13 @@
+<h1>My Wikinimous</h1>
+
+<% @articles.each do |article| %>
+<ul><li>
+  <%= link_to article.title, article_path(article) %><%= link_to "🗑️",
+            article_path(article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>
+<% end %>
+​
+<button><%= link_to 'Add a new article', new_article_path %></button>
